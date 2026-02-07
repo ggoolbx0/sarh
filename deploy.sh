@@ -74,10 +74,14 @@ else
 fi
 echo ""
 
-# ── Step 5: Storage Symlink ──────────────────────────────
+# ── Step 5: Storage Symlink (manual — exec() disabled on Hostinger) ──
 echo "▸ [5/8] Creating storage symlink..."
-php artisan storage:link --force
-echo "  ✓ storage/app/public → public/storage"
+if [ -L "$PROJECT_DIR/public/storage" ]; then
+    echo "  ✓ Symlink already exists"
+else
+    ln -s "$PROJECT_DIR/storage/app/public" "$PROJECT_DIR/public/storage"
+    echo "  ✓ storage/app/public → public/storage"
+fi
 echo ""
 
 # ── Step 6: Symlink public_html → sarh/public ───────────
