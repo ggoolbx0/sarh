@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Tajawal', sans-serif;
+    }
+
+    [dir="rtl"] {
+        text-align: right;
+    }
+}
+
+@layer components {
+    .card {
+        @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-6;
+    }
+
+    .card-header {
+        @apply text-lg font-bold text-gray-800 mb-4;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center px-6 py-3 bg-emerald-600 text-white font-medium rounded-xl hover:bg-emerald-700 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all duration-200;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-xl hover:bg-gray-200 transition-all duration-200;
+    }
+
+    .btn-danger {
+        @apply inline-flex items-center justify-center px-6 py-3 bg-red-600 text-white font-medium rounded-xl hover:bg-red-700 transition-all duration-200;
+    }
+
+    .badge-success {
+        @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800;
+    }
+
+    .badge-warning {
+        @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800;
+    }
+
+    .badge-danger {
+        @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800;
+    }
+
+    .input-field {
+        @apply w-full rounded-xl border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500;
+    }
+
+    .stat-card {
+        @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex flex-col items-center justify-center text-center;
+    }
+
+    .stat-value {
+        @apply text-3xl font-bold text-emerald-600;
+    }
+
+    .stat-label {
+        @apply text-sm text-gray-500 mt-1;
+    }
+}
