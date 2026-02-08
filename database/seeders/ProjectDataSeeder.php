@@ -27,75 +27,85 @@ class ProjectDataSeeder extends Seeder
                 'code'                 => 'SARH-HQ',
                 'name_ar'              => 'صرح الاتقان الرئيسي',
                 'name_en'              => 'SARH Al-Itqan HQ',
-                'city'                 => 'الرياض',
-                'address'              => 'صرح الاتقان — المقر الرئيسي',
+                'city_ar'              => 'الرياض',
+                'city_en'              => 'Riyadh',
+                'address_ar'           => 'صرح الاتقان — المقر الرئيسي',
+                'address_en'           => 'SARH Al-Itqan — Headquarters',
                 'latitude'             => 24.572368,
                 'longitude'            => 46.602829,
                 'geofence_radius'      => 17,
-                'shift_start'          => '08:00',
-                'shift_end'            => '17:00',
+                'default_shift_start'  => '08:00',
+                'default_shift_end'    => '17:00',
                 'grace_period_minutes' => 15,
-                'salary_budget'        => 100000,
+                'monthly_salary_budget'=> 100000,
                 'is_active'            => true,
             ],
             [
                 'code'                 => 'SARH-CORNER',
                 'name_ar'              => 'صرح الاتقان كورنر',
                 'name_en'              => 'SARH Al-Itqan Corner',
-                'city'                 => 'الرياض',
-                'address'              => 'صرح الاتقان — كورنر',
+                'city_ar'              => 'الرياض',
+                'city_en'              => 'Riyadh',
+                'address_ar'           => 'صرح الاتقان — كورنر',
+                'address_en'           => 'SARH Al-Itqan — Corner',
                 'latitude'             => 24.572439,
                 'longitude'            => 46.603008,
                 'geofence_radius'      => 17,
-                'shift_start'          => '08:00',
-                'shift_end'            => '17:00',
+                'default_shift_start'  => '08:00',
+                'default_shift_end'    => '17:00',
                 'grace_period_minutes' => 15,
-                'salary_budget'        => 120000,
+                'monthly_salary_budget'=> 120000,
                 'is_active'            => true,
             ],
             [
                 'code'                 => 'SARH-2',
                 'name_ar'              => 'صرح الاتقان 2',
                 'name_en'              => 'SARH Al-Itqan 2',
-                'city'                 => 'الرياض',
-                'address'              => 'صرح الاتقان — الفرع الثاني',
+                'city_ar'              => 'الرياض',
+                'city_en'              => 'Riyadh',
+                'address_ar'           => 'صرح الاتقان — الفرع الثاني',
+                'address_en'           => 'SARH Al-Itqan — Branch 2',
                 'latitude'             => 24.572262,
                 'longitude'            => 46.602580,
                 'geofence_radius'      => 17,
-                'shift_start'          => '08:00',
-                'shift_end'            => '17:00',
+                'default_shift_start'  => '08:00',
+                'default_shift_end'    => '17:00',
                 'grace_period_minutes' => 15,
-                'salary_budget'        => 80000,
+                'monthly_salary_budget'=> 80000,
                 'is_active'            => true,
             ],
             [
                 'code'                 => 'FADA-1',
                 'name_ar'              => 'فضاء المحركات 1',
                 'name_en'              => 'Fada Al-Muharrikat 1',
-                'city'                 => 'الرياض',
-                'address'              => 'فضاء المحركات — الفرع الأول',
+                'city_ar'              => 'الرياض',
+                'city_en'              => 'Riyadh',
+                'address_ar'           => 'فضاء المحركات — الفرع الأول',
+                'address_en'           => 'Fada Al-Muharrikat — Branch 1',
                 'latitude'             => 24.56968126,
                 'longitude'            => 46.61405911,
                 'geofence_radius'      => 17,
-                'shift_start'          => '08:00',
-                'shift_end'            => '17:00',
+                'default_shift_start'  => '08:00',
+                'default_shift_end'    => '17:00',
                 'grace_period_minutes' => 15,
-                'salary_budget'        => 150000,
+                'monthly_salary_budget'=> 150000,
                 'is_active'            => true,
             ],
             [
                 'code'                 => 'FADA-2',
                 'name_ar'              => 'فضاء المحركات 2',
                 'name_en'              => 'Fada Al-Muharrikat 2',
-                'city'                 => 'الرياض',
-                'address'              => 'فضاء المحركات — الفرع الثاني',
+                'city_ar'              => 'الرياض',
+                'city_en'              => 'Riyadh',
+                'address_ar'           => 'فضاء المحركات — الفرع الثاني',
+                'address_en'           => 'Fada Al-Muharrikat — Branch 2',
                 'latitude'             => 24.566088,
                 'longitude'            => 46.621759,
                 'geofence_radius'      => 17,
-                'shift_start'          => '08:00',
-                'shift_end'            => '17:00',
+                'default_shift_start'  => '08:00',
+                'default_shift_end'    => '17:00',
                 'grace_period_minutes' => 15,
-                'salary_budget'        => 200000,
+                'monthly_salary_budget'=> 200000,
                 'is_active'            => true,
             ],
         ];
@@ -113,7 +123,7 @@ class ProjectDataSeeder extends Seeder
         | 2. Super Admin — Level 10 God Mode (Abdullah)
         |----------------------------------------------------------------------
         */
-        User::updateOrCreate(
+        $admin = User::updateOrCreate(
             ['email' => 'abdullah@sarh.app'],
             [
                 'name_ar'                => 'عبدالله',
@@ -123,8 +133,6 @@ class ProjectDataSeeder extends Seeder
                 'basic_salary'           => 45000,
                 'housing_allowance'      => 11250,
                 'transport_allowance'    => 3000,
-                'security_level'         => 10,
-                'is_super_admin'         => true,
                 'branch_id'              => $branchModels['SARH-HQ']->id,
                 'working_days_per_month' => 22,
                 'working_hours_per_day'  => 8,
@@ -135,6 +143,8 @@ class ProjectDataSeeder extends Seeder
                 'total_points'           => 500,
             ]
         );
+        // security_level & is_super_admin are guarded — must forceFill
+        $admin->forceFill(['security_level' => 10, 'is_super_admin' => true])->save();
 
         /*
         |----------------------------------------------------------------------
@@ -185,7 +195,7 @@ class ProjectDataSeeder extends Seeder
         ];
 
         foreach ($employees as [$nameAr, $nameEn, $email, $empId, $salary, $branchCode]) {
-            User::updateOrCreate(
+            $user = User::updateOrCreate(
                 ['email' => $email],
                 [
                     'name_ar'                => $nameAr,
@@ -195,8 +205,6 @@ class ProjectDataSeeder extends Seeder
                     'basic_salary'           => $salary,
                     'housing_allowance'      => round($salary * 0.25),
                     'transport_allowance'    => 1500,
-                    'security_level'         => 1,
-                    'is_super_admin'         => false,
                     'branch_id'              => $branchModels[$branchCode]->id,
                     'working_days_per_month' => 22,
                     'working_hours_per_day'  => 8,
@@ -207,6 +215,8 @@ class ProjectDataSeeder extends Seeder
                     'total_points'           => 0,
                 ]
             );
+            // security_level is guarded — must forceFill
+            $user->forceFill(['security_level' => 1, 'is_super_admin' => false])->save();
         }
 
         $this->command->info('ProjectDataSeeder: 5 branches (17m) + 1 super admin + 35 employees seeded.');
