@@ -15,7 +15,10 @@
     {{-- Widgets Grid --}}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <livewire:attendance-widget />
+        <livewire:attendance-stats-widget />
         <livewire:gamification-widget />
+        <livewire:competition-widget />
+        <livewire:branch-progress-widget />
         <livewire:financial-widget />
         <livewire:circulars-widget />
     </div>

@@ -116,6 +116,31 @@ return [
     'exporting'          => 'جارٍ التصدير',
     'export_complete'    => 'اكتمل التصدير',
 
+    // Competition Widget
+    'competition_title'      => 'منافسة الفروع',
+    'your_branch'            => 'فرعك',
+    'top_branches'           => 'أفضل الفروع',
+
+    // Branch Progress Widget
+    'branch_progress_title'  => 'تقدم الفرع',
+    'branch_attendance_rate' => 'معدل الحضور',
+    'max_level'              => 'أعلى مستوى',
+    'no_branch_assigned'     => 'لم يتم تعيين فرع',
+
+    // Attendance Stats Widget
+    'attendance_stats_title' => 'إحصائيات الحضور',
+    'present'                => 'حاضر',
+    'late'                   => 'متأخر',
+    'absent'                 => 'غائب',
+    'streak'                 => 'تتابع',
+    'avg_delay'              => 'متوسط التأخير',
+    'hours_worked'           => 'ساعات العمل',
+    'overtime_hours'         => 'ساعات إضافية',
+    'weekly_breakdown'       => 'التفصيل الأسبوعي',
+    'week'                   => 'أسبوع',
+    'no_attendance_data'     => 'لا توجد بيانات حضور',
+    'on_time_days'           => 'أيام منضبطة',
+
     // General
     'loading'            => 'جارٍ التحميل',
 

@@ -116,6 +116,31 @@ return [
     'exporting'          => 'Exporting',
     'export_complete'    => 'Export Complete',
 
+    // Competition Widget
+    'competition_title'      => 'Branch Competition',
+    'your_branch'            => 'Your Branch',
+    'top_branches'           => 'Top Branches',
+
+    // Branch Progress Widget
+    'branch_progress_title'  => 'Branch Progress',
+    'branch_attendance_rate' => 'Attendance Rate',
+    'max_level'              => 'Max Level',
+    'no_branch_assigned'     => 'No branch assigned',
+
+    // Attendance Stats Widget
+    'attendance_stats_title' => 'Attendance Stats',
+    'present'                => 'Present',
+    'late'                   => 'Late',
+    'absent'                 => 'Absent',
+    'streak'                 => 'Streak',
+    'avg_delay'              => 'Avg Delay',
+    'hours_worked'           => 'Hours Worked',
+    'overtime_hours'         => 'Overtime Hours',
+    'weekly_breakdown'       => 'Weekly Breakdown',
+    'week'                   => 'Week',
+    'no_attendance_data'     => 'No attendance data',
+    'on_time_days'           => 'on-time days',
+
     // General
     'loading'            => 'Loading',
 
